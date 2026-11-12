@@ -1,0 +1,15 @@
+# Root gitignore for LeadFlow
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDE and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
