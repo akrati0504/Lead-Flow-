@@ -1,0 +1,43 @@
+# Git
+.git
+.gitignore
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# Composer & Node Dependencies
+/vendor
+/node_modules
+
+# Storage & Cache
+/storage/*.key
+/storage/logs/*
+!/storage/logs/.gitignore
+/storage/framework/cache/*
+!/storage/framework/cache/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+
+# Testing & Coverage
+/tests
+.phpunit.result.cache
+.phpunit.cache
+
+# IDE & Editor files
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Docker specific
+Dockerfile
+.dockerignore
+docker-compose*.yml

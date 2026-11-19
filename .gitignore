@@ -1,5 +1,14 @@
 # Root gitignore for LeadFlow
 
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Dependencies
+vendor/
+node_modules/
+
 # OS files
 Thumbs.db
 .DS_Store
