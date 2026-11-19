@@ -24,10 +24,15 @@ if [ -n "$APP_KEY" ]; then
     php artisan route:cache || echo "Route cache skipped"
 fi
 
-# Run database migrations automatically in production if requested
+# Run database migrations and seeding automatically in production if requested
 if [ "$RUN_MIGRATIONS" = "true" ]; then
     echo "Running database migrations..."
     php artisan migrate --force || echo "Migration command finished with exit code $?"
+fi
+
+if [ "$RUN_SEEDER" = "true" ]; then
+    echo "Seeding database with default admin account..."
+    php artisan db:seed --force || echo "Seeder command finished with exit code $?"
 fi
 
 echo "Starting PHP built-in server on 0.0.0.0:$PORT..."
